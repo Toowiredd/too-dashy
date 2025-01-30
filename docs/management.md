@@ -23,6 +23,7 @@ _The following article is a primer on managing self-hosted apps. It covers every
 - [Web Server Configuration](#web-server-configuration)
 - [Running a Modified App](#running-a-modified-version-of-the-app)
 - [Building your Own Container](#building-your-own-container)
+- [Improvements and Modifications](#improvements-and-modifications)
 
 ---
 
@@ -910,3 +911,54 @@ You can push your build image, by running: `docker push ghcr.io/OWNER/IMAGE_NAME
 **[⬆️ Back to Top](#management)**
 
 ---
+
+## Improvements and Modifications
+
+This section details the improvements and modifications made to the original software, including the integration of Copilot Kit.
+
+### Integration of Copilot Kit
+
+To integrate Copilot Kit into Too-Dashy, follow these steps:
+
+* **Install Copilot Kit**: Add Copilot Kit as a dependency in your project. 📦
+* **Configure Copilot Kit**: Update the configuration files to include Copilot Kit settings. 🛠️
+* **Update Documentation**: Modify the documentation to reflect the integration of Copilot Kit. 📚
+* **Test Integration**: Ensure that Copilot Kit is working correctly with Too-Dashy. 🧪
+
+#### Step-by-step instructions for installing Copilot Kit
+
+1. **Install Copilot Kit**:
+   * Add Copilot Kit as a dependency in your project by running the following command:
+     ```bash
+     npm install copilot-kit
+     ```
+   * Alternatively, if you are using Yarn, run:
+     ```bash
+     yarn add copilot-kit
+     ```
+
+2. **Configure Copilot Kit**:
+   * Update the configuration files to include Copilot Kit settings. The specific configuration changes needed for Copilot Kit are:
+     * Add the Copilot Kit configuration to your main configuration file, such as `user-data/conf.yml`.
+     * Ensure that the necessary environment variables are set in your `.env` file.
+     * Update the `docker-compose.yml` file to include any required services or settings for Copilot Kit.
+
+3. **Update Documentation**:
+   * Modify the documentation to reflect the integration of Copilot Kit. Update the following files:
+     * `README.md`: Add a section about Copilot Kit integration, including installation and configuration instructions.
+     * `docs/configuring.md`: Include detailed configuration options and examples for Copilot Kit.
+     * `docker/docker-readme.md`: Update the Docker-related documentation to include Copilot Kit setup instructions.
+
+4. **Test Integration**:
+   * Ensure that Copilot Kit is working correctly with Too-Dashy by performing the following tests:
+     * Verify that the Copilot Kit services are running correctly by checking the logs and status of the Docker containers.
+     * Test the functionality of Copilot Kit within Too-Dashy to ensure it is working as expected.
+     * Run any existing test suites to confirm that the integration has not introduced any issues.
+
+### More ideas about integrating Copilot Kit
+
+* **Learn how to use Copilot Kit effectively**:
+  * Refer to the official Copilot Kit documentation for detailed usage instructions and best practices.
+  * Explore the available features and capabilities of Copilot Kit to make the most out of its integration with Too-Dashy.
+
+**[⬆️ Back to Top](#management)**
