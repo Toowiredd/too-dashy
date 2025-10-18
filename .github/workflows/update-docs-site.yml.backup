@@ -1,20 +1,16 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: update-docs-site.yml.backup
 name: 📝 Update Documentation
 
 # This will run whenever the /docs directory in master branch is updated,
 # or if the workflow is manually dispatched, plus a sync check on Sun at 03:30 UTC
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_dispatch:
-#   schedule:
-#     - cron: '30 3 * * 0'
-#   push:
-#     branches:
-#       - master
-#     paths:
-#       - 'docs/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * 0'
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/**'
 
 
 # Jobs to be run:

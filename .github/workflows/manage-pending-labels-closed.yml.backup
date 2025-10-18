@@ -1,13 +1,9 @@
 # When a new comment is added to an issue, if it had the Stale or Awaiting User Response labels,
 # then those labels will be removed, providing it was not user lissy93 who added the commend. 
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: manage-pending-labels-closed.yml.backup
 name: 🎯 Remove Pending Labels on Close
 on:
-  workflow_dispatch:  # Manual trigger only
-#   issues:
-#     types: [closed]
+  issues:
+    types: [closed]
 jobs:
   remove-labels:
    runs-on: ubuntu-latest

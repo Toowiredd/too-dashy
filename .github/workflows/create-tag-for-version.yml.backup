@@ -1,19 +1,15 @@
 # When Dashy's version in package.json is updated
 # this workflow will create a new tag
 # And then publish it to the repository
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: create-tag-for-version.yml.backup
 name: 🏗️ Tag on Version Change
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_dispatch:
-#   push:
-#     branches:
-#       - master
-#     paths:
-#       - 'package.json'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'package.json'
 
 jobs:
   tag-if-version-updated:

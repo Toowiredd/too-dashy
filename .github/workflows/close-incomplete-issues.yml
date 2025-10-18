@@ -1,8 +1,12 @@
 # Close any issue that does not match any of the issue templates
+# DISABLED AUTO-RUN: Originally triggered on auto-triggers
+# Converted to manual execution only - 2025-10-18
+# Backup available at: close-incomplete-issues.yml.backup
 name: 🎯 Close Incomplete Issues
 on:
-  issues:
-    types: [opened, edited]
+  workflow_dispatch:  # Manual trigger only
+#   issues:
+#     types: [opened, edited]
 jobs:
   auto_close_issues:
     runs-on: ubuntu-latest

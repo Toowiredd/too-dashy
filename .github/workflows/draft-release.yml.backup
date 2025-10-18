@@ -1,19 +1,15 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: draft-release.yml.backup
 name: 🏗️ Draft New Release
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   push:
-#     tags:
-#       - '^[0-9]+\.[0-9]+\.[0-9]+$'
-#       - '**'
-#   workflow_dispatch:
-#     inputs:
-#       tag:
-#         description: 'Tag to draft a release for (must already exist)'
-#         required: true
+  push:
+    tags:
+      - '^[0-9]+\.[0-9]+\.[0-9]+$'
+      - '**'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to draft a release for (must already exist)'
+        required: true
 
 jobs:
   create-draft-release:

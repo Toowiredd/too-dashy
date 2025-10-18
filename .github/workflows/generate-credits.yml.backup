@@ -1,14 +1,10 @@
 # Inserts list of contributors and community members into ./docs/credits.md
 # Also generates an SVG showing all contributors, which is embedded into readme
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: generate-credits.yml.backup
 name: 📊 Generate Contributor Credits
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_dispatch: # Manual dispatch
-#   schedule:
-#     - cron: '0 1 * * 0' # At 01:00 on Sunday.
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 1 * * 0' # At 01:00 on Sunday.
 jobs:
   # Job #1 - Generate an embedded SVG asset, showing all contributors
   generate-contributors:

@@ -1,8 +1,5 @@
 # Shows changes to any yarn.lock in PR comment
 # Useful for easily understanding dependency changes and consequences
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: dependency-updates-summary.yml.backup
 name: 💡 Show Dependency Changes
 on: [pull_request]
 jobs:

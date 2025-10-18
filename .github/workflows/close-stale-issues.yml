@@ -1,9 +1,13 @@
 # Closes any issues that no longer have user interaction
+# DISABLED AUTO-RUN: Originally triggered on auto-triggers
+# Converted to manual execution only - 2025-10-18
+# Backup available at: close-stale-issues.yml.backup
 name: 🎯 Close Stale Issues
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '0 1 * * *' # Run at 01:00 each day
+  workflow_dispatch:  # Manual trigger only
+#   workflow_dispatch:
+#   schedule:
+#     - cron: '0 1 * * *' # Run at 01:00 each day
 jobs:
   stale:
     runs-on: ubuntu-latest

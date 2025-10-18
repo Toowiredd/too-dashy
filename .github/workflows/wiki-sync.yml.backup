@@ -1,13 +1,9 @@
 # Uses the contents of the ./docs directory for Dashy's GH Wiki page
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: wiki-sync.yml.backup
 name: 📊 Wiki Sync
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_dispatch: # Manual dispatch
-#   schedule:
-#     - cron: '0 1 * * 0' # At 01:00 on Sunday.
+  workflow_dispatch: # Manual dispatch
+  schedule:
+    - cron: '0 1 * * 0' # At 01:00 on Sunday.
 jobs:
   update-wiki:
     runs-on: ubuntu-latest

@@ -1,21 +1,17 @@
-# DISABLED AUTO-RUN: Originally triggered on auto-triggers
-# Converted to manual execution only - 2025-10-18
-# Backup available at: docker-build-publish.yml.backup
 name: 🐳 Build + Publish Multi-Platform Image
 
 on:
-  workflow_dispatch:  # Manual trigger only
-#   workflow_dispatch:
-#   push:
-#     branches: ['master']
-#     tags: ['*.*']
-#     paths:
-#       - '**.js'
-#       - 'src/**'
-#       - 'public/**'
-#       - 'services/**'
-#       - '.github/workflows/docker-build-publish.yml'
-#       - 'Dockerfile'
+  workflow_dispatch:
+  push:
+    branches: ['master']
+    tags: ['*.*']
+    paths:
+      - '**.js'
+      - 'src/**'
+      - 'public/**'
+      - 'services/**'
+      - '.github/workflows/docker-build-publish.yml'
+      - 'Dockerfile'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
